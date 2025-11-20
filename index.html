@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <title>Simle Course Grade Calculator</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Simle Course Grade Calculator</h1>
+    <div>
+        <span>Enter a new grading item: </span>
+        <input type="text" placeholder="name" id="newItemName">
+        <input type="text" placeholder="wight (%)" id="newItemWeight">
+        <button id="addItemButton">Add Item</button>
+    </div>
+    <ul id="itemList">
+        <!-- <li class="item">
+            this is an item (10%)
+            <input type="text" placeholder="grade (%)" id="itemGrade">
+            <button class="deleteItem"> delete</button>
+        </li> -->
+    </ul>
+    <div id="minPassingGrade">
+        Minimum Passing Grade:
+        <input type="text" placeholder="grade (%)" id="minPassingGradeValue">
+    </div>
+    <div id="totalGrade">
+        Total Grade: 
+        <span id="totalGradeValue">100%</span>
+        <button id="calculateTotalGrade">Calculate</button>
+    </div>
+</body>
