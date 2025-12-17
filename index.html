@@ -1,30 +1,93 @@
 <!DOCTYPE html>
-<head>
-    <title>Simle Course Grade Calculator</title>
-    <script src="script.js" defer></script>
-</head>
-<body>
-    <h1>Simle Course Grade Calculator</h1>
-    <div>
-        <span>Enter a new grading item: </span>
-        <input type="text" placeholder="name" id="newItemName">
-        <input type="text" placeholder="wight (%)" id="newItemWeight">
-        <button id="addItemButton">Add Item</button>
-    </div>
-    <ul id="itemList">
-        <!-- <li class="item">
-            this is an item (10%)
-            <input type="text" placeholder="grade (%)" id="itemGrade">
-            <button class="deleteItem"> delete</button>
-        </li> -->
-    </ul>
-    <div id="minPassingGrade">
-        Minimum Passing Grade:
-        <input type="text" placeholder="grade (%)" id="minPassingGradeValue">
-    </div>
-    <div id="totalGrade">
-        Total Grade: 
-        <span id="totalGradeValue">100%</span>
-        <button id="calculateTotalGrade">Calculate</button>
-    </div>
-</body>
+<html lang="en" data-bs-theme="dark">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Simple Grade Calculator</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
+        <!-- bootstrap -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+            crossorigin="anonymous"
+        />
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"
+        ></script>
+        <!-- anonymous analytics: no personal info stored -->
+        <script
+            data-goatcounter="https://simple-grade-calculator.goatcounter.com/count"
+            async
+            src="//gc.zgo.at/count.js"
+        ></script>
+    </head>
+    <body class="p-3 w-75 m-auto mt-5">
+        <h1 class="display-1">Simple Grade Calculator</h1>
+        <p class="fs-5">Minimalistic and Powerful</p>
+        <hr />
+        <form class="my-3">
+            <div class="form-text">Enter a new grading item:</div>
+            <span class="input-group gap-3 mb-3">
+                <input
+                    type="text"
+                    class="form-control"
+                    placeholder="item name*"
+                    id="newItemName"
+                />
+                <input
+                    type="number"
+                    class="form-control"
+                    placeholder="wight (%)*"
+                    id="newItemWeight"
+                />
+                <button
+                    type="button"
+                    class="btn btn-outline-secondary"
+                    id="addItemButton"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-plus-lg"
+                        viewBox="0 0 16 16"
+                    >
+                        <path
+                            fill-rule="evenodd"
+                            d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"
+                        />
+                    </svg>
+                </button>
+            </span>
+        </form>
+        <ul id="itemList" class="list-group list-group-flush">
+        </ul>
+        <hr />
+
+        <div id="minPassingGrade" class="mb-3">
+            Minimum Passing Grade:
+            <input
+                type="number"
+                placeholder="grade (%)"
+                id="minPassingGradeValue"
+                class="ms-1 align-middle grade"
+                value="50"
+            />
+        </div>
+        <div id="totalGrade">
+            <span class="align-middle">Total Grade:</span>
+            <span id="totalGradeValue">100%</span>
+            <button
+                id="calculateTotalGrade"
+                class="btn btn-sm btn-outline-secondary ms-1"
+            >
+                Calculate
+            </button>
+        </div>
+    </body>
+</html>
